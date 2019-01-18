@@ -12,6 +12,7 @@ from dependencies import Vector as v
 
 #IMPORTANT VARIABLES
 database = "testdb"
+threshold = 0.4
 user = 'postgres'
 post_password = '1234'
 host = "127.0.0.1"
@@ -117,7 +118,7 @@ for i in range(K_value):
         y = All_uuids[j]
         for r in x:
             for c in y:
-                if (sim[r,c] > 0.15): #Change The threshold value if needed 
+                if (sim[r,c] > threshold): #Change The threshold value if needed 
                     all_cor.append(r+1)
                     all_cor.append(c+1)
         if(flag==1):
@@ -150,12 +151,8 @@ for i in range(K_value):
                         cur.execute("UPDATE complete4 SET sim_cluster=%s WHERE sr = %s ",(zii,cor));
         count+=1    
 conn.commit()
-print('Fuck\'in Over')
-
 print('----------------------------8---------------------------')
 
-print(clusters)
-print('\n')
 
 
 
