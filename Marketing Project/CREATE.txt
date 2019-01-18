@@ -1,0 +1,12 @@
+CREATE TABLE complete1
+(
+    sr serial,
+    uuid varchar(200) NOT NULL PRIMARY KEY,
+    url text,
+    content text NOT NULL,
+    title text ,
+    source text ,
+    domain text ,
+    cluster_no integer,
+    sim_cluster text 
+)
