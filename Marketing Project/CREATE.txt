@@ -1,4 +1,4 @@
-CREATE TABLE complete1
+CREATE TABLE complete4
 (
     sr serial,
     uuid varchar(200) NOT NULL PRIMARY KEY,
